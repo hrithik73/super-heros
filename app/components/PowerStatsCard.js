@@ -1,7 +1,8 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native';
-import * as Progress from 'react-native-progress';
 
+
+import PowerContainer from '../components/PowerComponents'
 import Text from "../components/Text"
 
 
@@ -9,83 +10,72 @@ const PowerStatsCard = ({ powerState }) => {
     // console.log(powerState)
     return (
         <View style={styles.container} >
+             <View style={styles.header} >
+                  <Text style={styles.headerText} >PowerStats</Text>
+            </View>  
 
-            <View style={{ flexDirection: "row" }} >
-                <View style={{ flexDirection: "row" }} >
-                    <Text>Intelligence</Text>
-                    <Text style={
-                        {
-                            paddingLeft: 10,
-                            paddingRight: 10,
-                            fontSize: 20
-                        }} >{powerState.intelligence}</Text>
-                </View>
-                <View style={{ flex: 1, alignItems: "flex-end" }} >
-                    <Progress.Bar
-                        progress={powerState.intelligence / 100}
-                        color="blue"
-                        height={20}
-                    />
-                </View>
-            </View>
+        <View style={styles.barContainer} >
 
-
-            <View style={{ flexDirection: "row" }} >
-                <Text>Combat</Text>
-                <Text style={
-                    {
-                        paddingLeft: 10,
-                        paddingRight: 10,
-                        fontSize: 20
-                    }} >{powerState.intelligence}</Text>
-
-                <View style={{ flex: 1, alignItems: "flex-end" }} >
-                    <Progress.Bar
-                        progress={powerState.combat / 100}
-                        color="blue"
-                        height={20}
-                    />
-                </View>
-
-
-            </View>
-
-            <Progress.Bar
-                progress={powerState.power / 100}
-                color="red"
-                height={20}
+            <PowerContainer 
+            title={powerState.intelligence}
+            placeHolder="Intelligence"
             />
-            <Progress.Bar
-                progress={powerState.speed / 100}
-                color="blue"
-                height={20}
-            />
-            <Progress.Bar
-                progress={powerState.strength / 100}
-                color="blue"
-                height={20}
 
+            <PowerContainer 
+            title={powerState.combat}
+            placeHolder="Combat"
             />
-            <Progress.Bar
-                progress={powerState.durability / 100}
-                color="blue"
-                height={20}
+
+            <PowerContainer 
+            title={powerState.power }
+            placeHolder="Power"
+            />
+
+            <PowerContainer 
+            title={powerState.speed}
+            placeHolder="Speed"
+            />
+
+            <PowerContainer 
+            title={powerState.strength}
+            placeHolder="Strength"
+            />
+            <PowerContainer 
+            title={powerState.durability}
+            placeHolder="Durability"
             />
         </View>
+
+    </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        // backgroundColor: "black",
-        height: 400,
-        width: "100%",
+        padding:1,
+        backgroundColor: "#DCDCDC",
+        height: 250,
+        // width: "100%",
         borderRadius: 10,
-        backgroundColor: "#FD151B",
-        // justifyContent: "center",
-        // alignItems: "center"
-        justifyContent: "center",
-        alignItems: "stretch"
+        marginBottom: 10,
+    },
+    header:{
+        justifyContent:"center",
+        alignItems:"center",    
+        marginBottom:20,
+        // backgroundColor:"red" 
+    },
+    headerText:{
+        fontSize:30,
+        fontWeight:"800"
+    },
+    barContainer:{
+        justifyContent:"center",
+        padding:2,
+        paddingLeft:10,
+    },
+    conatenText:{
+
     }
 })
 export default PowerStatsCard

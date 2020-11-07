@@ -8,9 +8,8 @@ const BioCard = ({ bioData }) => {
     return (
         <View style={styles.container} >
             <View style={styles.header} >
-            <Text style={styles.headerText} >Biography:-</Text>
-            </View>
-           
+                  <Text style={styles.headerText} >Biography</Text>
+            </View>           
         <View style={styles.detailsContainer} >
            <Text>Name:- {bioData.name}</Text>
             <Text>Full-Name:- {bioData["full-name"]}</Text>
@@ -29,29 +28,23 @@ const BioCard = ({ bioData }) => {
 const styles = StyleSheet.create({
     container: {
         padding:1,
-        backgroundColor: "#008080",
-        paddingTop: 10,
-        height: 350,
-        width: "100%",
+        backgroundColor: "#DCDCDC",
+        height: 320,
+        // width: "100%",
         borderRadius: 10,
-    },
-    detailsContainer:{
-    justifyContent:"center",
-    // alignItems:"center",
-    // alignSelf:"auto"
-    padding:2,
-    paddingLeft:10,
-    alignItems:"flex-start"
-    },
+        marginBottom: 10,
 
-    header:{
-        // flex:1,
+    },
+    detailsContainer: {
         justifyContent:"center",
-        alignItems:"center",
-        // backgroundColor:"black",
-        // alignContent:"center"
-        // paddingBottom:100,
-        marginBottom:50        
+        padding:2,
+        paddingLeft:10,
+    },
+    header:{
+        justifyContent:"center",
+        alignItems:"center",    
+        marginBottom:20,
+        // backgroundColor:"red" 
     },
     headerText:{
         fontSize:30,

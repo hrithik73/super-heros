@@ -21,9 +21,9 @@ const AppText = ({ style, children }) => {
 const styles = StyleSheet.create({
     container: {
         fontFamily: 'Product-Sans',
-        fontSize: 18
+        fontSize: 20,
+        color:"black"
     }
-
 
 })
 

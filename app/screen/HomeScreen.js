@@ -22,7 +22,7 @@ const HomeScreen = () => {
         const data = await response.json();
         setData(data.results)
         // console.log(data.results)
-        console.log(Data)
+        // console.log(Data)
     }
     useEffect(() => {
         getData()
