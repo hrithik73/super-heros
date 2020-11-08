@@ -1,140 +1,87 @@
 import React from 'react'
-import { View, StyleSheet, Image, Text, ScrollView } from 'react-native';
+import { View, StyleSheet, Image, ScrollView } from 'react-native';
 import AppearanceCard from '../components/AppearanceCard';
 import BioCard from '../components/BioCard';
 import ConnectionCard from '../components/ConnectionCard';
 import PowerStatsCard from '../components/PowerStatsCard';
 import WorkCard from '../components/WorkCard';
 
+const DetailScreen = ({ route }) => {
+    // console.log(route.params)
 
-const powerState = {
-    "response": "success",
-    "id": "70",
-    "name": "Batman",
-    "intelligence": "100",
-    "strength": "26",
-    "speed": "27",
-    "durability": "50",
-    "power": "47",
-    "combat": "100"
-}
-
-const bioData = {
-    "response": "success",
-    "id": "70",
-    "name": "Batman",
-    "full-name": "Bruce Wayne",
-    "alter-egos": "No alter egos found.",
-    "aliases": [
-        "Insider",
-        "Matches Malone"
-    ],
-    "place-of-birth": "Crest Hill, Bristol Township; Gotham County",
-    "first-appearance": "Detective Comics #27",
-    "publisher": "DC Comics",
-    "alignment": "good"
-}
-
-const appearance={
-    "response": "success",
-    "id": "70",
-    "name": "Batman",
-    "gender": "Male",
-    "race": "Human",
-    "height": [
-      "6'2",
-      "188 cm"
-    ],
-    "weight": [
-      "210 lb",
-      "95 kg"
-    ],
-    "eye-color": "blue",
-    "hair-color": "black"
-  }
-  const work={
-    "response": "success",
-    "id": "70",
-    "name": "Batman",
-    "occupation": "Businessman",
-    "base": "Batcave, Stately Wayne Manor, Gotham City; Hall of Justice, Justice League Watchtower"
-  }
-
-const connection={
-    "response": "success",
-    "id": "70",
-    "name": "Batman",
-    "group-affiliation": "Batman Family, Batman Incorporated, Justice League, Outsiders, Wayne Enterprises, Club of Heroes, formerly White Lantern Corps, Sinestro Corps",
-    "relatives": "Damian Wayne (son), Dick Grayson (adopted son), Tim Drake (adopted son), Jason Todd (adopted son), Cassandra Cain (adopted ward)\nMartha Wayne (mother, deceased), Thomas Wayne (father, deceased), Alfred Pennyworth (former guardian), Roderick Kane (grandfather, deceased), Elizabeth Kane (grandmother, deceased), Nathan Kane (uncle, deceased), Simon Hurt (ancestor), Wayne Family"
-  }
-
-const DetailScreen = ({ imageUrl }) => {
     return (
         <View style={styles.container} >
             <View style={styles.imageContainer}  >
-            <Image source={{ uri: imageUrl }} style={styles.image} />
+                <Image source={{ uri: route.params.image.url }} style={styles.image} />
             </View>
-          
-           
-            <ScrollView style={styles.detailsContainer}  >
-                <View style={styles.bioContainer}  >
-                    <BioCard bioData={bioData} />
-                </View>
-               
-                <View style={styles.powerStateContainer} >
-                    <PowerStatsCard powerState={powerState} />
-                </View>
-               
-                <View style={styles.appearanceCardContainer} >
-                    <AppearanceCard appearance={appearance} />
-                </View>
-                
-                <View style={styles.workContainer}  >
-                    <WorkCard work={work} />
-                </View>
+            <View style={styles.detailsContainer} >
+                <ScrollView contentContainerStyle={styles.contentContainer}  >
+                    <View style={styles.bioContainer}  >
+                        <BioCard bioData={route.params.biography} name={route.params.name} />
+                    </View>
 
-                <View style={styles.connectionCardContainer}>
-                    <ConnectionCard connection={connection} />
-                </View>
-            </ScrollView>
+                    <View style={styles.powerStateContainer} >
+                        <PowerStatsCard powerState={route.params.powerstats} />
+                    </View>
 
-        </View>
+                    <View style={styles.appearanceCardContainer} >
+                        <AppearanceCard appearance={route.params.appearance} />
+                    </View>
+
+                    <View style={styles.workContainer}  >
+                        <WorkCard work={route.params.work} />
+                    </View>
+
+                    <View style={styles.connectionCardContainer}>
+                        <ConnectionCard connection={route.params.connections} />
+                    </View>
+                </ScrollView>
+            </View>
+        </View >
     );
 }
 
 const styles = StyleSheet.create({
- 
     container: {
         flex: 1,
     },
     image: {
         height: 400,
-        width: "100%",  
-        // overflow:"hidden"
+        // width: "100%",
     },
-    imageContainer:{      
-        height: 350,
+    imageContainer: {
+        height: 300,
+        // flex: 1,
+        borderRadius: 10,
+        // backgroundColor: "black"
     },
     bioContainer: {
         // paddingTop:10,
-        paddingBottom:10,
+        paddingBottom: 10,
     },
     detailsContainer: {
-        flex:1,
-        padding: 10,
-        // borderRadius:1000
+        flex: 1,
+        // backgroundColor: "black",
+        padding: 5,
+        borderRadius: 100
+        // backgroundColor: "black"
     },
-    powerStateContainer:{
-        paddingBottom:10,
+    powerStateContainer: {
+        paddingBottom: 10,
     },
-    appearanceCardContainer:{
-        paddingBottom:10
+    appearanceCardContainer: {
+        paddingBottom: 10
     },
-    workContainer:{
-        paddingBottom:10
+    workContainer: {
+        paddingBottom: 10
     },
-    connectionCardContainer:{
-        paddingBottom:10 
+    connectionCardContainer: {
+        paddingBottom: 10
+    },
+    contentContainer: {
+        // padding: 10
+        // borderRadius: 1,
+        // backgroundColor: "black"
     }
 })
 export default DetailScreen

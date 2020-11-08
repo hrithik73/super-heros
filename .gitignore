@@ -1,7 +1,9 @@
 node_modules/**/*
 .expo/*
-.expo-shared
+.expo-shared/*
 npm-debug.*
+.env
+*.env
 *.jks
 *.p8
 *.p12
