@@ -1,9 +1,11 @@
 import React from 'react';
-import { View, Image, StyleSheet, TouchableWithoutFeedback, Text } from 'react-native';
+import { View, Image, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import colors from "../config/colors";
 
+import Text from "../components/Text"
 
-const Card = ({ imageUrl, title, subtitle, onPress, data }) => {
+
+const Card = ({ imageUrl, title, subtitle, onPress, }) => {
     // console.log(imageUrl)
     return (
         <TouchableWithoutFeedback onPress={onPress} >

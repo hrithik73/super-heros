@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { StyleSheet, FlatList, Alert, Keyboard } from 'react-native';
 
 
-
 import ActivityIndicator from '../components/ActivityIndicator';
 import Card from '../components/Card';
 import Input from "../components/Input";
@@ -45,23 +44,25 @@ const HomeScreen = ({ navigation }) => {
 
     return (
         <Screen style={styles.container}>
-            <Input onPress={submitHandler} />
+            <Input onPress={submitHandler} finalinput={finalInput} />
 
             <ActivityIndicator visible={isLoading} />
 
-            <FlatList
-                data={Data}
-                keyExtractor={(item) => item.id}
-                renderItem={(items) =>
-                    <Card
-                        data={items.item}
-                        imageUrl={items.item.image.url}
-                        title={items.item.name}
-                        subtitle={items.item.work.base}
-                        onPress={() => navigation.navigate("DetailScreen", items.item)}
-                    />
-                }
-            />
+            {!isLoading &&
+                <FlatList
+                    data={Data}
+                    keyExtractor={(item) => item.id}
+                    renderItem={(items) =>
+                        <Card
+                            data={items.item}
+                            imageUrl={items.item.image.url}
+                            title={items.item.name}
+                            subtitle={items.item.work.base}
+                            onPress={() => navigation.navigate("DetailScreen", items.item)}
+                        />
+                    }
+                />
+            }
 
         </Screen>
     );

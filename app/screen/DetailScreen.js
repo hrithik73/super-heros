@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, StyleSheet, Image, ScrollView } from 'react-native';
+
 import AppearanceCard from '../components/AppearanceCard';
 import BioCard from '../components/BioCard';
 import ConnectionCard from '../components/ConnectionCard';

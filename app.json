@@ -20,6 +20,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.hrithik.supernerds",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -27,6 +29,8 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
-    }
+    },
+    "description": "An App for super-hero nerds for all the nerdy information about their favorite superheroes from Marvel and DC comics :)",
+    "githubUrl": "https://github.com/hrithik73/super-nerds/tree/main"
   }
 }

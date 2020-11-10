@@ -4,8 +4,9 @@ import { AntDesign } from "@expo/vector-icons"
 
 
 import Button from "./Button"
-const AppTextInput = ({ onPress }) => {
+const AppTextInput = ({ onPress, finalinput }) => {
 
+    const placeholder = "Search for ie:" + finalinput
     const [input, setInput] = useState("");
     const handleChange = e => {
         setInput(e)
@@ -14,11 +15,12 @@ const AppTextInput = ({ onPress }) => {
     return (
         <View style={styles.container} >
             <View style={styles.inputContainer}>
-                <AntDesign name="search1" size={24} color="black" />
+                <AntDesign name="search1" size={25} color="black" />
                 <TextInput
+                    onSubmitEditing={() => onPress(input, setInput)}
                     value={input}
                     style={styles.AppTextInput}
-                    placeholder="  Search for ie:Batman"
+                    placeholder={placeholder}
                     placeholderTextColor="black"
                     onChangeText={handleChange}
 
