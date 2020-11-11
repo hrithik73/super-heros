@@ -4,7 +4,7 @@ An App for super-hero nerds for all the nerdy information about their favorite s
 
 ## :arrow_right:  Demo
 <p float="left">
-  <img src="super-nerds/../screenshots/demo.gif" width="300" height ="600"/>
+  <img src="super-nerds/../screenshots/demo.gif" width="400" height ="700"/>
 </p>
   
 ### screenshots:-  
