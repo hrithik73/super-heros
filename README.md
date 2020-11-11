@@ -6,11 +6,11 @@ An App for super-hero nerds for all the nerdy information about their favorite s
 <p float="left">
   <img src="super-nerds/../screenshots/demo.gif" width="300" height ="600"/>
 </p>
-<br>  
+
 ### screenshots:-  
-</br>     
+
 <p float="center">
-  <img src="super-nerds/../screenshots/screenshots.jpg" width="600" height ="100%"/>
+  <img src="super-nerds/../screenshots/screenshots.jpg" width="100%" height ="1000"/>
 </p>  
 
 ## Installation
