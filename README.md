@@ -6,12 +6,15 @@ An App for super-hero nerds for all the nerdy information about their favorite s
 <p float="left">
   <img src="super-nerds/../screenshots/demo.gif" width="300" height ="600"/>
 </p>
-<br>  
+  
 ### screenshots:-  
-</br>     
-<p float="center">
-  <img src="super-nerds/../screenshots/screenshots.jpg" width="600" height ="100%"/>
-</p>  
+|                                                          |                                                          |                                                          |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| <img src="super-nerds/../screenshots/1.jpg" width="400"> | <img src="super-nerds/../screenshots/2.jpg" width="400"> | <img src="super-nerds/../screenshots/3.jpg" width="400"> |
+
+|                                                          |                                                          |                                                          |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| <img src="super-nerds/../screenshots/4.jpg" width="400"> | <img src="super-nerds/../screenshots/5.jpg" width="400"> | <img src="super-nerds/../screenshots/6.jpg" width="400"> |
 
 ## Installation
 
@@ -46,7 +49,6 @@ An App for super-hero nerds for all the nerdy information about their favorite s
 - Github: [Hrithik Singh](https://github.com/hrithik73)
 - Twitter: [@_hrithiksingh](https://www.twitter.com/_hrithiksingh)
 - Linkedin: [Hrithik Singh](https://www.linkedin.com/in/hrithik-singh-a8547b198/)
-
 
 
 ## Contributing
