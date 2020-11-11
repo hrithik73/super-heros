@@ -6,7 +6,6 @@ An App for super-hero nerds for all the nerdy information about their favorite s
 <p float="left">
   <img src="super-nerds/../screenshots/demo.gif" width="300" height ="600"/>
 </p>
-<<<<<<< HEAD
   
 ### screenshots:-  
 |                                                          |                                                          |                                                          |
@@ -16,14 +15,6 @@ An App for super-hero nerds for all the nerdy information about their favorite s
 |                                                          |                                                          |                                                          |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | <img src="super-nerds/../screenshots/4.jpg" width="400"> | <img src="super-nerds/../screenshots/5.jpg" width="400"> | <img src="super-nerds/../screenshots/6.jpg" width="400"> |
-=======
-
-### screenshots:-  
-
-<p float="center">
-  <img src="super-nerds/../screenshots/screenshots.jpg" width="100%" height ="1000"/>
-</p>  
->>>>>>> b85f1aa0da1bc10d682e4f15944f33256f705ab8
 
 ## Installation
 
