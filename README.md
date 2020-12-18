@@ -3,9 +3,8 @@
 An App for super-hero nerds for all the nerdy information about their favorite superheroes from Marvel and DC comics.
 
 ## :arrow_right:  Demo
-<p float="left">
-  <img src="super-nerds/../screenshots/demo.gif" width="400" height ="700"/>
-</p>
+<!-- <p float="left"> -->
+<!--   <img src="super-nerds/../screenshots/demo.gif" width="400" height ="700"/> </p>--!>
   
 ### screenshots:-  
 |                                                          |                                                          |                                                          |
