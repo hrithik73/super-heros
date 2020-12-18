@@ -6,7 +6,8 @@ import GlobleStyle from '../config/GlobleStyle'
 import SocialIcon from "../components/SocialIcons"
 import Text from "../components/Text"
 import Screen from "../components/Screen"
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from '../components/ProjectCard'
+
 
 
 const AboutScreen = () => {
