@@ -20,7 +20,7 @@ An App for super-hero nerds for all the nerdy information about their favorite s
 
 1. Clone the Repository
   
-   <pre><code>git clone https://github.com/hrithik73/super-nerds.git</code></pre>
+   <pre><code>git clone https://github.com/hrithik73/super-heros.git</code></pre>
 
 2. Next, run the next command to install all project dependencies:
    For Yarn: <pre><code>yarn install</code></pre>
